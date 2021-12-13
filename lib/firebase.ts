@@ -1,8 +1,8 @@
-import firebase from "firebase/app";
-import "firebase/auth";
-import "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
-firebase.initializeApp({
+const firebaseApp = initializeApp({
   apiKey: "AIzaSyA1C8V394OOb5hAxv5g-2uCcGjys9zmMFI",
   authDomain: "habit-warrior.firebaseapp.com",
   projectId: "habit-warrior",
@@ -11,4 +11,5 @@ firebase.initializeApp({
   appId: "1:466055537287:web:92262153686f87d1b20e22",
 });
 
-export default firebase;
+export const auth = getAuth(firebaseApp);
+export const firestore = getFirestore(firebaseApp);
