@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Navbar: FunctionComponent = () => {
   return (
-    <nav>
+    <nav className="container">
       <ul>
         <li>
           <Link href="/">Home</Link>

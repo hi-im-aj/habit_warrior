@@ -5,7 +5,6 @@ import LoginBox from "@/components/LoginBox";
 const login: NextPage = () => {
   return (
     <main className="container">
-      <Navbar />
       <LoginBox />
     </main>
   );

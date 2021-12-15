@@ -4,10 +4,10 @@ import { useAuth } from "@/utils/auth";
 const dashboard: NextPage = () => {
   const { user } = useAuth();
   return (
-    <div className="container">
+    <main className="container">
       <h1>Dashboard</h1>
       <h2>{user && user.email}</h2>
-    </div>
+    </main>
   );
 };
 

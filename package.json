@@ -2,7 +2,7 @@
   "name": "habit_warrior",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"next dev\" \"sass --watch styles/main.scss:styles/globals.css\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -19,8 +19,10 @@
   "devDependencies": {
     "@types/node": "16.11.12",
     "@types/react": "17.0.37",
+    "concurrently": "^6.4.0",
     "eslint": "8.4.1",
     "eslint-config-next": "12.0.7",
+    "sass": "^1.45.0",
     "typescript": "4.5.3"
   }
 }
