@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseApp = initializeApp({
-  apiKey: "AIzaSyA1C8V394OOb5hAxv5g-2uCcGjys9zmMFI",
-  authDomain: "habit-warrior.firebaseapp.com",
-  projectId: "habit-warrior",
-  storageBucket: "habit-warrior.appspot.com",
-  messagingSenderId: "466055537287",
-  appId: "1:466055537287:web:92262153686f87d1b20e22",
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
 });
 
 export const auth = getAuth(firebaseApp);
