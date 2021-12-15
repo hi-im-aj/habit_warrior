@@ -1,5 +1,4 @@
 import type { FunctionComponent } from "react";
-import React from "react";
 import { GoogleAuthProvider } from "firebase/auth";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import { auth } from "@/lib/firebase";

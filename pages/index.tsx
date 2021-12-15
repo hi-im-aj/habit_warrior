@@ -1,11 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import React, { Fragment } from "react";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/layouts/Navbar";
 
-const Home: NextPage = () => {
+const home: NextPage = () => {
   return (
-    <Fragment>
+    <>
       <Head>
         <title>Habit Warrior!</title>
         <meta name="description" content="A powerful habit tracking app" />
@@ -15,8 +14,8 @@ const Home: NextPage = () => {
         <Navbar />
         <h1>hello world</h1>
       </main>
-    </Fragment>
+    </>
   );
 };
 
-export default Home;
+export default home;

@@ -1,8 +1,14 @@
 import type { NextPage } from "next";
-import React from "react";
+import { useAuth } from "@/utils/auth";
 
 const dashboard: NextPage = () => {
-  return <div>dashboard page</div>;
+  const { user } = useAuth();
+  return (
+    <div className="container">
+      <h1>Dashboard</h1>
+      <h2>{user && user.email}</h2>
+    </div>
+  );
 };
 
 export default dashboard;

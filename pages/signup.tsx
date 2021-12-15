@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
-import React from "react";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/layouts/Navbar";
 
 const signup: NextPage = () => {
   return (
