@@ -20,18 +20,14 @@ const Navbar: FunctionComponent<any> = ({ router }) => {
   const links = (() => {
     if (!user) {
       return (
-        <>
-          <Grid item>
-            <Link href="login">
-              <Button>Log in</Button>
-            </Link>
-          </Grid>
-          <Grid item>
-            <Link href="signup">
-              <Button>Sign up</Button>
-            </Link>
-          </Grid>
-        </>
+        <Grid item>
+          <Link href="login">
+            <Button>Log in</Button>
+          </Link>
+          <Link href="signup">
+            <Button>Sign up</Button>
+          </Link>
+        </Grid>
       );
     } else if (router.pathname !== "/dashboard") {
       return (
@@ -47,7 +43,7 @@ const Navbar: FunctionComponent<any> = ({ router }) => {
 
   return (
     <Container maxWidth="xl" component="nav" sx={{ my: "1rem" }}>
-      <Grid container>
+      <Grid container sx={{ justifyContent: "space-between" }}>
         <Grid item xs={offset}>
           <Link href="/">
             <Button>

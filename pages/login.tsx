@@ -31,7 +31,7 @@ const login: NextPage = () => {
           </ListItem>
           <ListItem>
             <Button sx={{ width: "100%", mt: "1rem" }} onClick={onSubmit} variant="contained">
-              Sign in
+              Log in
             </Button>
           </ListItem>
           <ListItem>
