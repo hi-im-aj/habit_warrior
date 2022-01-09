@@ -15,7 +15,11 @@ const AuthContext: Context<any> = createContext({});
 const useProvideAuth = () => {
   const [user, setUser]: [User | boolean, Function] = useState(false);
 
-  const signOut = () => auth.signOut().then(() => setUser(false));
+  const signOut = () =>
+    auth.signOut().then(() => {
+      setUser(false);
+      Router.push("/");
+    });
 
   const signUpWithEmailAndPassword = (email: string, password: string) => {
     createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {

@@ -17,7 +17,7 @@ export default ({ Component, pageProps }: AppProps) => {
     <AuthProvider>
       <ThemeProvider theme={theme}>
         <Navbar />
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </ThemeProvider>
     </AuthProvider>
   );

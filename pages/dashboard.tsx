@@ -2,13 +2,12 @@ import type { NextPage } from "next";
 import { useAuth } from "@/utils/auth";
 import { Container, CircularProgress, Box } from "@mui/material";
 import { useEffect } from "react";
-import Router from "next/router";
 
 const dashboard: NextPage = () => {
   const { user, signOut } = useAuth();
-  useEffect(() => {
-    if (!user) Router.push("/");
-  }, [user]);
+
+  useEffect(() => {}, [user]);
+
   return (
     <Container maxWidth="xl" component="main">
       {user ? (
