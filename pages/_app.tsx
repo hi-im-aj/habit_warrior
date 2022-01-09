@@ -8,7 +8,9 @@ import { green } from "@mui/material/colors";
 export default ({ Component, pageProps }: AppProps) => {
   const theme = createTheme({
     palette: {
-      primary: green,
+      primary: {
+        main: green[600],
+      },
     },
   });
   return (

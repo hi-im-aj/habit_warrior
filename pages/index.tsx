@@ -10,9 +10,7 @@ const home: NextPage = () => {
         <meta name="description" content="A powerful habit tracking app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container maxWidth="xl">
-        <h1>hello world</h1>
-      </Container>
+      <Container maxWidth="xl"></Container>
     </>
   );
 };
