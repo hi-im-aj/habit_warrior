@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
-import Navbar from "@/components/layouts/Navbar";
+import { Container } from "@mui/material";
 
 const signup: NextPage = () => {
   return (
-    <main className="container">
+    <Container maxWidth="xl">
       <h1>signup page</h1>
-    </main>
+    </Container>
   );
 };
 

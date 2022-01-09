@@ -1,7 +1,7 @@
 import type { FunctionComponent } from "react";
 import { GoogleAuthProvider } from "firebase/auth";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-import { auth } from "@/lib/firebase";
+import { auth as firebaseAuth } from "@/lib/firebase";
 
 const uiConfig = {
   signInFlow: "popup",
@@ -12,7 +12,7 @@ const uiConfig = {
 const LoginBox: FunctionComponent = () => {
   return (
     <div>
-      <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={auth} />
+      <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebaseAuth} />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Navbar from "@/components/layouts/Navbar";
+import { Container } from "@mui/material";
 
 const home: NextPage = () => {
   return (
@@ -10,9 +10,9 @@ const home: NextPage = () => {
         <meta name="description" content="A powerful habit tracking app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="container">
+      <Container maxWidth="xl">
         <h1>hello world</h1>
-      </main>
+      </Container>
     </>
   );
 };

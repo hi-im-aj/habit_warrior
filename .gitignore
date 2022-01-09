@@ -17,3 +17,4 @@ yarn-error.log*
 .vercel
 *.tsbuildinfo
 *.css
+*.css.map

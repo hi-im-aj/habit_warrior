@@ -1,13 +1,19 @@
 import type { NextPage } from "next";
 import { useAuth } from "@/utils/auth";
+import { Container } from "@mui/material";
 
 const dashboard: NextPage = () => {
-  const { user } = useAuth();
+  const { user, signOut } = useAuth();
   return (
-    <main className="container">
+    <Container maxWidth="xl" component="main">
       <h1>Dashboard</h1>
-      <h2>{user && user.email}</h2>
-    </main>
+      {user && (
+        <>
+          <h2>{user && user.email}</h2>
+          <button onClick={signOut}>Sign out</button>
+        </>
+      )}
+    </Container>
   );
 };
 

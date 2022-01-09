@@ -1,18 +1,25 @@
 import type { User } from "firebase/auth";
 import { createContext, useContext, useEffect, useState } from "react";
-import { auth as firebaseAuth } from "@/lib/firebase";
+import { auth } from "@/lib/firebase";
 
-const AuthContext = createContext({ user: null });
+const AuthContext = createContext({
+  user: false,
+  signOut: undefined,
+});
 
 const useProvideAuth = () => {
-  const [user, setUser]: [User | null, Function] = useState(null);
+  const [user, setUser]: [User | boolean, Function] = useState(false);
+
+  const signOut = async () => {
+    return auth.signOut().then(() => setUser(false));
+  };
 
   useEffect(() => {
-    const unsubscribe = firebaseAuth.onAuthStateChanged((user) => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         setUser(user);
       } else {
-        setUser(null);
+        setUser(false);
       }
     });
     return unsubscribe;
@@ -20,6 +27,7 @@ const useProvideAuth = () => {
 
   return {
     user,
+    signOut,
   };
 };
 
